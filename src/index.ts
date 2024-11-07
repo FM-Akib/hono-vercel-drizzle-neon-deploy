@@ -19,6 +19,17 @@ app.get('/users', async (c) => {
   }
 });
 
+app.post('/users', async (c) => {
+ try{
+    const body = await c.req.json();
+    const user = await db.insert(usersTable).values(body).returning();
+    return c.json(user);
+ }catch (error) {
+    console.error('Database error:', error);
+    return c.json({ error: 'Failed to post users' }, 500);
+  }
+})
+
 
 const port = 3000
 console.log(`Server is running on http://localhost:${port}`)
