@@ -27,7 +27,7 @@ This tutorial will guide you through setting up a basic API project using **Hono
 Run the following command to build your project:
   
 ```bash
-npm run dev
+npm run build
 ```
 
 ### Step 3: Configure api/index.ts
