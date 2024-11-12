@@ -29,6 +29,42 @@ Run the following command to build your project:
 ```bash
 npm run build
 ```
+### If you having error or not generating dist folder 
+1. First install typescript and tsc-alias.If already installed then skip,
+```bash
+npm i typescript tsc-alias
+```
+
+2. Then for dist folder we need to set outDir, see in bellow code or copy and paste it to your tsconfig.json
+```tsconfig.json
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "jsx": "react-jsx",
+    "jsxImportSource": "hono/jsx",
+    "baseUrl": "./",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "typeRoots": ["./node_modules/@types"],
+    "types": [
+      "node"
+    ],
+    "strict": true,
+    "outDir": "./dist",
+    "skipLibCheck": true
+  },
+  "tsc-alias": {
+    "resolveFullPaths": true
+  }
+}
+```
+Then execute the CLI and you see dist folder in root.
+```bash
+npm run build
+```
 
 ### Step 3: Configure api/index.ts
 
