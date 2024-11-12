@@ -75,14 +75,14 @@ touch public/.gitkeep
 ```
 vercel
 ```
-Follow the prompts:
+Follow the prompts:<br>
 
-Select your project.
-When asked "Link to an existing project?" select No.
-Choose a project name.
-Set the directory to ./.
-When asked "Want to modify settings?", select No.
-Configure Environment Variables:
+Select your project.<br>
+When asked "Link to an existing project?" select No.<br>
+Choose a project name.<br>
+Set the directory to ./.<br>
+When asked "Want to modify settings?", select No.<br>
+Configure Environment Variables:<br>
 After deploying, go to your Vercel dashboard and add any necessary environment variables.
 
 
